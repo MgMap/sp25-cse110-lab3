@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Team Go Gitters Meeting Minutes</h1>
+      <h2>Brain Storming Project ideas</h2>
+      <h3>April 13th, 2025</h3>
+    </header>
+
+    <main>
+      <section class="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li>Min Paing</li>
+          <li>Anthony Velikov</li>
+          <li>Chaitya Jodhavat</li>
+          <li>Hanbin Tan</li>
+        </ul>
+        <nav>
+          <a href="#attendance">Attendance</a> | <a href="#agenda">Agenda</a> |
+          <a href="#new-business">New Business</a> |
+          <a href="#feedback-form">Feedback Form</a>
+        </nav>
+      </section>
+
+      <section class="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li><b>Review Powell memes</b></li>
+          <li><strong>Discuss project ideas</strong></li>
+          <li><i>Decide on project</i></li>
+          <li><em>Assign roles</em></li>
+          <li>Set deadlines</li>
+        </ol>
+      </section>
+
+      <section class="notes">
+        <h2>Unfinished Business</h2>
+        <p>Finalize the user interface design for the timer.</p>
+      </section>
+
+      <section class="notes">
+        <h2>New Business</h2>
+        <p>Discussed the following project ideas:</p>
+        <ul>
+          <li>Timer</li>
+          <li>Pomodoro Timer</li>
+          <li>Task Tracker</li>
+          <li>Habit Tracker</li>
+        </ul>
+        <p>Decided to work on the Pomodoro Timer project.</p>
+      </section>
+
+      <section>
+        <h2>Comments/Questions/Concerns</h2>
+        <p>How will we handle user data privacy for saved session history?</p>
+      </section>
+
+      <section class="Diagrams">
+        <h2>Diagrams</h2>
+        <img src="image.png" alt="Diagram of the Pomodoro Timer architecture" />
+      </section>
+
+      <section>
+        <h2>Meeting Recordings</h2>
+        <audio controls>
+          <source src="demo.mp4" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <video controls width="320" height="240">
+          <source src="demo.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+    </main>
+
+    <footer>
+      <h2 id="feedback-form">Feedback Form</h2>
+      <form>
+        <fieldset>
+          <legend>Provide Your Feedback</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" /><br /><br />
+
+          <label for="feedback">Feedback:</label><br />
+          <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea
+          ><br /><br />
+
+          <label for="rating">Rate the meeting:</label>
+          <input type="radio" id="good" name="rating" value="good" />
+          <label for="good">Good</label>
+          <input type="radio" id="average" name="rating" value="average" />
+          <label for="average">Average</label>
+          <input type="radio" id="poor" name="rating" value="poor" />
+          <label for="poor">Poor</label><br /><br />
+
+          <label for="topics">Topics of Interest:</label>
+          <select id="topics" name="topics">
+            <option value="ui">User Interface</option>
+            <option value="features">New Features</option>
+            <option value="privacy">Data Privacy</option></select
+          ><br /><br />
+
+          <label for="subscribe">Subscribe to updates:</label>
+          <input type="checkbox" id="subscribe" name="subscribe" /><br /><br />
+
+          <label for="browser">Preferred Browser:</label>
+          <input list="browsers" id="browser" name="browser" />
+          <datalist id="browsers">
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Edge"></option>
+            <option value="Safari"></option></datalist
+          ><br /><br />
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </footer>
+  </body>
+</html>
