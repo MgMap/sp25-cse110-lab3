@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --primary-color: #c9c5c5; /* blue */
+    --accent-color: hsl(34, 100%, 50%); /* orange-ish */
+  }
 
 main {
     border-style: solid;
@@ -18,6 +28,7 @@ header
     padding: 2rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #ccc;
+    background-color: var(--primary-color, #0077cc);
 }
 
 header h1 
@@ -32,24 +43,22 @@ header h3
     margin: 0.25rem 0;
 }
 
-nav {
-    a {
-      text-decoration: none;
-      color: #0077cc;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
+nav a {
+    text-decoration: none;
+    color: #0077cc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
   
-      &:hover {
-        background-color: #e0f0ff;
-        color: #004080;
-      }
+  nav a:hover {
+    background-color: #e0f0ff;
+    color: #004080;
+  }
   
-      &:active {
-        background-color: #b3d9ff;
-        color: #002244;
-      }
-    }
+  nav a:active {
+    background-color: #b3d9ff;
+    color: #002244;
   }
   
 /* Section: Attendance (Longhand margin and padding) */
@@ -70,9 +79,30 @@ nav {
     border-left: 2px solid #ccc;
   }
   
+  body {
+    font-family: "Playwrite AU SA", cursive;
+  }
+  
+
+  ul > li {
+    list-style-type: circle;
+  }
+  
+  /* General sibling: Any <p> that follows an <h2> inside the same parent */
+  h2 ~ p {
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Adjacent sibling: First <p> right after <h2> */
+  h2 + p {
+    font-weight: bold;
+    color: #640202;
+  }
+  
   .agenda {
     border-style: dashed;
-    border-color: #ff7f50; /* coral */
+    border-color: hsl(16, 100%, 66%); /* coral */
     border-width: 2px;
     border-radius: 6px;
   
@@ -81,7 +111,7 @@ nav {
   }
   
 .notes {
-    border: 4px double #2e8b57; /* sea green */
+    border: 4px double seagreen; /* sea green */
     border-radius: 8px;
   
     padding: 1.2rem;
@@ -95,7 +125,13 @@ nav {
     border: 1px solid #999;
     border-radius: 12px;
 }
-  
+
+#feedback-form {
+    background-color: #d81212;
+    border-left: 4px solid #0077cc;
+    padding: 1rem;
+  }
+
 form {
     max-width: 600px;
     margin: 2rem auto;
@@ -162,3 +198,83 @@ form {
     background-color: #22668a;
     transform: scale(0.98); /* slight press-down effect */
   }
+
+
+  /* ========== Responsive Layout with Media Queries ========== */
+
+/* Mobile: 0–599px */
+@media (max-width: 599px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    main, section {
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+  
+    form {
+      padding: 1rem;
+    }
+  
+    img, video {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Tablet: 600px–1023px */
+@media (min-width: 600px) and (max-width: 1023px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    nav {
+      gap: 1rem;
+    }
+  
+    form {
+      padding: 1.5rem;
+    }
+  
+    main {
+      padding: 2rem;
+    }
+  }
+  
+  /* Desktop: 1024px and up */
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;  /* Center horizontally */
+    }
+  
+    main, form, header, footer {
+      width: 70%;
+      max-width: 900px;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    form {
+      padding: 2rem;
+    }
+  }
+  
+  
